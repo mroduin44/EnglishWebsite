@@ -5,34 +5,130 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<script language="JavaScript">
+<!-- Beginning of JavaScript Applet -------------------
+function computefscore(f) 
+   {  
+      var qsumhigh = 0; var qsumlow = 0; var diff = 0; var qcount = 0 ; var n = 20 ; var n_elements = 100
+
+<!-- score high context -->   
+      { for (var i = 0; i < 10; i++) 
+        {if (document.fscale.elements[i].checked)
+            {qsumhigh = qsumhigh + parseInt(document.fscale.elements[i].value)
+             qcount = qcount + 1}
+        }
+      }
+      { for (var i = 15; i < 25; i++) 
+        {if (document.fscale.elements[i].checked)
+            {qsumhigh = qsumhigh + parseInt(document.fscale.elements[i].value)
+             qcount = qcount + 1}
+        }
+      }
+      { for (var i = 30; i < 35; i++) 
+        {if (document.fscale.elements[i].checked)
+            {qsumhigh = qsumhigh + parseInt(document.fscale.elements[i].value)
+             qcount = qcount + 1}
+        }
+      }
+      { for (var i = 45; i < 55; i++) 
+        {if (document.fscale.elements[i].checked)
+            {qsumhigh = qsumhigh + parseInt(document.fscale.elements[i].value)
+             qcount = qcount + 1}
+        }
+      }
+      { for (var i = 75; i < 85; i++) 
+        {if (document.fscale.elements[i].checked)
+            {qsumhigh = qsumhigh + parseInt(document.fscale.elements[i].value)
+             qcount = qcount + 1}
+        }
+      }
+      { for (var i = 90; i < 95; i++) 
+        {if (document.fscale.elements[i].checked)
+            {qsumhigh = qsumhigh + parseInt(document.fscale.elements[i].value)
+             qcount = qcount + 1}
+        }
+      }
+
+<!-- Score low context -->
+
+      { for (var i = 10; i < 15; i++) 
+        {if (document.fscale.elements[i].checked)
+            {qsumlow = qsumlow + parseInt(document.fscale.elements[i].value)
+             qcount = qcount + 1}
+        }
+      }
+      { for (var i = 25; i < 30; i++) 
+        {if (document.fscale.elements[i].checked)
+            {qsumlow = qsumlow + parseInt(document.fscale.elements[i].value)
+             qcount = qcount + 1}
+        }
+      }
+      { for (var i = 35; i < 45; i++) 
+        {if (document.fscale.elements[i].checked)
+            {qsumlow = qsumlow + parseInt(document.fscale.elements[i].value)
+             qcount = qcount + 1}
+        }
+      }
+      { for (var i = 55; i < 75; i++) 
+        {if (document.fscale.elements[i].checked)
+            {qsumlow = qsumlow + parseInt(document.fscale.elements[i].value)
+             qcount = qcount + 1}
+        }
+      }
+      { for (var i = 85; i < 90; i++) 
+        {if (document.fscale.elements[i].checked)
+            {qsumlow = qsumlow + parseInt(document.fscale.elements[i].value)
+             qcount = qcount + 1}
+        }
+      }
+      { for (var i = 95; i < 100; i++) 
+        {if (document.fscale.elements[i].checked)
+            {qsumlow = qsumlow + parseInt(document.fscale.elements[i].value)
+             qcount = qcount + 1}
+        }
+      }
+<!-- show results -->      
+     {if (qcount > 0 ) 
+         {document.fscale.hscore.value = qsumhigh;
+         document.fscale.lscore.value = qsumlow;}
+      } 
+      if (qsumhigh >= qsumlow){diff = qsumhigh - qsumlow}
+      if (qsumlow > qsumhigh){diff = qsumlow - qsumhigh}
+      document.fscale.dscore.value = diff
+      
+      if (qcount < n) {alert("You only answered " + qcount + " of " + n + 
+            " questions. Try doing all of them.")} 
+ }
+// -- End of JavaScript code -------------- --> 
+</script>
 <style>
 body, html {height: 100%}
-body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Times New Roman", sans-serif}
 .menu {display: none}
 .bgimg {
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url("/w3images/pizza.jpg");
     min-height: 90%;
+	
 }
 </style>
 <body>
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top w3-hide-small">
-  <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
-    <a href="#" class="w3-bar-item w3-button"></a>
+  <div class="w3-bar w3-xlarge w3-black w3-hover-opacity-off" id="myNavbar">
+    <a href="#" class="w3-bar-item w3-button">Home</a>
+	<a href="#" class="w3-bar-item w3-button">Home</a>
   </div>
 </div>
   
 <!-- Header with image -->
 <header class="bgimg w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-bottomleft w3-padding">
-    <span class="w3-tag w3-xlarge">Text</span>
-  </div>
   <div class="w3-display-middle w3-center">
-    <span class="w3-text-white w3-hide-small" style="font-size:100px">Title 1<br>Title 2</span>
-    <span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px"><b>Title 1<br>CRUST PIZZA</b></span>
+    <span class="w3-text-white w3-hide-small" style="font-size:100px">thin<br>CRUST PIZZA</span>
+    <span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px"><b>thin<br>CRUST PIZZA</b></span>
+    <p><a href="#menu" class="w3-button w3-xxlarge w3-black">Take The Context Test</a></p>
   </div>
 </header>
 
@@ -40,9 +136,501 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
 <div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
   <div class="w3-content">
   
-    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">THE MENU</h1>
-    <div class="w3-row w3-center w3-border w3-border-dark-grey">
-      
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Context Test</h1>
+    <div class="w3-row w3-center ">
+      <form method="POST" name="fscale">
+  <div align="center">
+    <center>
+  <table border="1"  >
+    <tbody><tr> 
+      <td height="5" colspan="7" width="630"> 
+        <p class="MsoNormal" align="center"><span style="mso-bidi-font-size: 10.0pt; mso-bidi-font-weight: normal"><font size="3"><b style="mso-bidi-font-weight: normal; mso-bidi-font-size: 10.0pt">CULTURAL-CONTEXT 
+          INVENTORY</b></font></span></p>
+        <p class="MsoNormal" align="center"><span style="mso-bidi-font-size: 10.0pt; mso-bidi-font-weight: normal"><font size="2"><b style="mso-bidi-font-weight: normal; mso-bidi-font-size: 10.0pt">Claire 
+          B. Halverson</b></font></span> 
+      </p></td>
+    </tr>
+    <tr> 
+      <td height="5" colspan="7" width="633"><i style="mso-bidi-font-style:normal"><span style="font-size:10.0pt">Instructions: </span></i><span style="font-size:10.0pt"><span style="mso-spacerun: yes"></span>For 
+        each of the following twenty items, check 1, 2, 3, 4, or 5 to indicate 
+        your tendencies and preferences in a work situation.</span></td>
+    </tr>
+    <tr> 
+      <td width="21" height="10"></td>
+      <td width="425" height="10"></td>
+      <td width="40" height="10" align="center"><b>1</b></td>
+      <td width="40" height="10" align="center"> 
+        <p align="center"><b>2</b> 
+      </p></td>
+      <td width="40" height="10" align="center"><b>3</td>
+      <td width="40" height="10" align="center"><b>4</b></td>
+      <td width="40" height="10" align="center"><b>5</b></td>
+    </tr>
+    <tr> 
+      <td width="21" height="10"><b>1.</b></td>
+      <td width="425" height="10" valign="top" align="left"> 
+        <p class="MsoNormal" style="text-indent: 0; tab-stops: 3.75in 315.0pt 351.0pt 387.0pt 418.0pt; margin-left: 0"><span style="font-size:10.0pt">When 
+          communicating, I tend to use a lot of facial<span style="mso-tab-count:1"> </span>expressions, handgestures, and body movements<span style="mso-tab-count:1"></span>rather 
+          than relying mostly on words.<span style="mso-tab-count:1"> </span></span> 
+      </p></td>
+      <td width="40" height="10" align="center"> 
+        <input type="radio" value="1" name="R1">
+      </td>
+      <td width="23" height="10" align="center"> 
+        <input type="radio" value="2" name="R1">
+      </td>
+      <td width="25" height="10" align="center"> 
+        <input type="radio" value="3" name="R1">
+      </td>
+      <td width="22" height="10" align="center"> 
+        <input type="radio" value="4" name="R1">
+      </td>
+      <td width="42" height="10" align="center"> 
+        <input type="radio" value="5" name="R1">
+      </td>
+    </tr>
+    <tr> 
+      <td width="21" height="10"><b>2.</b></td>
+      <td width="425" height="10"> 
+        <p class="MsoNormal" style="text-indent: 0; tab-stops: 3.75in 315.0pt 351.0pt 387.0pt 418.0pt; margin-left: 0"><span style="font-size:10.0pt">I 
+          pay more attention to the context of a conversation—who said what and 
+          under what circumstances—thanI 
+          do to the words.</span> 
+      </p></td>
+      <td width="40" height="10" align="center"> 
+        <input type="radio" value="1" name="R2">
+      </td>
+      <td width="23" height="10" align="center"> 
+        <input type="radio" value="2" name="R2">
+      </td>
+      <td width="25" height="10" align="center"> 
+        <input type="radio" value="3" name="R2">
+      </td>
+      <td width="22" height="10" align="center"> 
+        <input type="radio" value="4" name="R2">
+      </td>
+      <td width="42" height="10" align="center"> 
+        <input type="radio" value="5" name="R2">
+      </td>
+    </tr>
+    <tr> 
+      <td width="21" height="10"><b>3.</b></td>
+      <td width="425" height="10"> 
+        <p class="MsoNormal" style="text-indent: 0; tab-stops: 3.75in 315.0pt 351.0pt 387.0pt 418.0pt; margin-left: 0"><span style="font-size:10.0pt">When 
+          communicating, I tend to spell things out<span style="mso-tab-count:1"> </span>quickly and directly rather than talking around and adding<span style="mso-tab-count:1"> </span>to the point.</span> 
+      </p></td>
+      <td width="40" height="10" align="center"> 
+        <input type="radio" value="1" name="R3">
+      </td>
+      <td width="23" height="10" align="center"> 
+        <input type="radio" value="2" name="R3">
+      </td>
+      <td width="25" height="10" align="center"> 
+        <input type="radio" value="3" name="R3">
+      </td>
+      <td width="22" height="10" align="center"> 
+        <input type="radio" value="4" name="R3">
+      </td>
+      <td width="42" height="10" align="center"> 
+        <input type="radio" value="5" name="R3">
+      </td>
+    </tr>
+    <tr> 
+      <td width="21" height="10"><b>4.</b></td>
+      <td width="425" height="10"> 
+        <p class="MsoNormal" style="tab-stops: 3.75in 315.0pt 351.0pt 387.0pt 418.0pt"><span style="font-size:10.0pt">In 
+          an interpersonal disagreement, I tend to be more emotional than logical 
+          and rational.</span> 
+      </p></td>
+      <td width="40" height="10" align="center"> 
+        <input type="radio" value="1" name="R4">
+      </td>
+      <td width="23" height="10" align="center"> 
+        <input type="radio" value="2" name="R4">
+      </td>
+      <td width="25" height="10" align="center"> 
+        <input type="radio" value="3" name="R4">
+      </td>
+      <td width="22" height="10" align="center"> 
+        <input type="radio" value="4" name="R4">
+      </td>
+      <td width="42" height="10" align="center"> 
+        <input type="radio" value="5" name="R4">
+      </td>
+    </tr>
+    <tr> 
+      <td width="21" height="19"><b>5.</b></td>
+      <td width="425" height="19"> 
+        <p class="MsoNormal" style="tab-stops: 3.75in 315.0pt 351.0pt 387.0pt 418.0pt"><span style="font-size:10.0pt">I 
+          tend to have a small, close circle of friends rather than<span style="mso-tab-count:1"> </span>a large, but less close, circle of friends.</span> 
+      </p></td>
+      <td width="40" height="19" align="center"> 
+        <input type="radio" value="1" name="R5">
+      </td>
+      <td width="23" height="19" align="center"> 
+        <input type="radio" value="2" name="R5">
+      </td>
+      <td width="25" height="19" align="center"> 
+        <input type="radio" value="3" name="R5">
+      </td>
+      <td width="22" height="19" align="center"> 
+        <input type="radio" value="4" name="R5">
+      </td>
+      <td width="42" height="19" align="center"> 
+        <input type="radio" value="5" name="R5">
+      </td>
+    </tr>
+    <tr> 
+      <td width="21" height="19"><b>6.</b></td>
+      <td width="425" height="19"> 
+        <p class="MsoNormal" style="tab-stops: 3.75in 315.0pt 351.0pt 387.0pt 418.0pt"><span style="font-size:10.0pt">When 
+          working with others, I prefer to get the job done first and socialize afterward rather than socialize first and then tackle the job.</span> 
+      </p></td>
+      <td width="40" height="19" align="center"> 
+        <input type="radio" value="1" name="R6">
+      </td>
+      <td width="23" height="19" align="center"> 
+        <input type="radio" value="2" name="R6">
+      </td>
+      <td width="25" height="19" align="center"> 
+        <input type="radio" value="3" name="R6">
+      </td>
+      <td width="22" height="19" align="center"> 
+        <input type="radio" value="4" name="R6">
+      </td>
+      <td width="42" height="19" align="center"> 
+        <input type="radio" value="5" name="R6">
+      </td>
+    </tr>
+    <tr> 
+      <td width="21" height="19"><b>7.</b></td>
+      <td width="425" height="19"><span style="font-size:10.0pt">I would rather 
+        work in a group than by myself.</span></td>
+      <td width="40" height="19" align="center"> 
+        <input type="radio" value="1" name="R7">
+      </td>
+      <td width="23" height="19" align="center"> 
+        <input type="radio" value="2" name="R7">
+      </td>
+      <td width="25" height="19" align="center"> 
+        <input type="radio" value="3" name="R7">
+      </td>
+      <td width="22" height="19" align="center"> 
+        <input type="radio" value="4" name="R7">
+      </td>
+      <td width="42" height="19" align="center"> 
+        <input type="radio" value="5" name="R7">
+      </td>
+    </tr>
+    <tr> 
+      <td width="21" height="19"><b>8.</b></td>
+      <td width="425" height="19"> 
+        <p class="MsoNormal" style="text-indent: 0; tab-stops: 3.75in 315.0pt 351.0pt 387.0pt 418.0pt; margin-left: 0"><span style="font-size:10.0pt">I 
+          believe rewards should be given for individual accomplishment rather 
+          than for group accomplishments.</span> 
+      </p></td>
+      <td width="40" height="19" align="center"> 
+        <input type="radio" value="1" name="R8">
+      </td>
+      <td width="23" height="19" align="center"> 
+        <input type="radio" value="2" name="R8">
+      </td>
+      <td width="25" height="19" align="center"> 
+        <input type="radio" value="3" name="R8">
+      </td>
+      <td width="22" height="19" align="center"> 
+        <input type="radio" value="4" name="R8">
+      </td>
+      <td width="42" height="19" align="center"> 
+        <input type="radio" value="5" name="R8">
+      </td>
+    </tr>
+    <tr> 
+      <td width="21" height="19"><b>9.</b></td>
+      <td width="425" height="19"> 
+        <p class="MsoNormal" style="text-indent: 0; tab-stops: 3.75in 315.0pt 351.0pt 387.0pt 418.0pt; margin-left: 0"><span style="font-size:10.0pt">I 
+          describe myself in terms of my accomplishments<span style="mso-tab-count:1"></span>rather 
+          than in terms of my family and relationships.</span> 
+      </p></td>
+      <td width="40" height="19" align="center"> 
+        <input type="radio" value="1" name="R9">
+      </td>
+      <td width="23" height="19" align="center"> 
+        <input type="radio" value="2" name="R9">
+      </td>
+      <td width="25" height="19" align="center"> 
+        <input type="radio" value="3" name="R9">
+      </td>
+      <td width="22" height="19" align="center"> 
+        <input type="radio" value="4" name="R9">
+      </td>
+      <td width="42" height="19" align="center"> 
+        <input type="radio" value="5" name="R9">
+      </td>
+    </tr>
+    <tr> 
+      <td width="21" height="19"><b>10.</b></td>
+      <td width="425" height="19"> 
+        <p class="MsoNormal" style="text-indent: 0; tab-stops: 3.75in 315.0pt 351.0pt 387.0pt 418.0pt; margin-left: 0"><span style="font-size:10.0pt">I 
+          prefer sharing space with others to having my own private space.<span style="mso-tab-count:1"> </span></span> 
+      </p></td>
+      <td width="40" height="19" align="center"> 
+        <input type="radio" value="1" name="R10">
+      </td>
+      <td width="23" height="19" align="center"> 
+        <input type="radio" value="2" name="R10">
+      </td>
+      <td width="25" height="19" align="center"> 
+        <input type="radio" value="3" name="R10">
+      </td>
+      <td width="22" height="19" align="center"> 
+        <input type="radio" value="4" name="R10">
+      </td>
+      <td width="42" height="19" align="center"> 
+        <input type="radio" value="5" name="R10">
+      </td>
+    </tr>
+    <tr> 
+      <td width="21" height="23"><b>11.</b></td>
+      <td width="425" height="23"> 
+        <p class="MsoNormal" style="text-indent: 0; tab-stops: 3.75in 315.0pt 351.0pt 387.0pt 418.0pt; margin-left: 0"><span style="font-size:10.0pt">I 
+          would rather work for someone who maintains authority<span style="mso-tab-count:1"></span>and 
+          functions for the good of the group than work for someone who allows 
+          a lot of autonomy and individual decision<span style="mso-tab-count:1"></span>making.</span> 
+      </p></td>
+      <td width="40" height="19" align="center"> 
+        <input type="radio" value="1" name="R11">
+      </td>
+      <td width="23" height="19" align="center"> 
+        <input type="radio" value="2" name="R11">
+      </td>
+      <td width="25" height="19" align="center"> 
+        <input type="radio" value="3" name="R11">
+      </td>
+      <td width="22" height="19" align="center"> 
+        <input type="radio" value="4" name="R11">
+      </td>
+      <td width="42" height="19" align="center"> 
+        <input type="radio" value="5" name="R11">
+      </td>
+    </tr>
+    <tr> 
+      <td width="21" height="19"><b>12.</b></td>
+      <td width="425" height="19"> 
+        <p class="MsoNormal" style="text-indent: 0; tab-stops: 3.75in 315.0pt 351.0pt 387.0pt 418.0pt; margin-left: 0"><span style="font-size:10.0pt">I 
+          believe it is more important to be on time than to let<span style="mso-tab-count:1"></span>other 
+          concerns take priority.</span> 
+      </p></td>
+      <td width="40" height="19" align="center"> 
+        <input type="radio" value="1" name="R12">
+      </td>
+      <td width="23" height="19" align="center"> 
+        <input type="radio" value="2" name="R12">
+      </td>
+      <td width="25" height="19" align="center"> 
+        <input type="radio" value="3" name="R12">
+      </td>
+      <td width="22" height="19" align="center"> 
+        <input type="radio" value="4" name="R12">
+      </td>
+      <td width="42" height="19" align="center"> 
+        <input type="radio" value="5" name="R12">
+      </td>
+    </tr>
+    <tr> 
+      <td width="21" height="19"><b>13.</b></td>
+      <td width="425" height="19"> 
+        <p class="MsoNormal" style="text-indent: 0; tab-stops: 3.75in 315.0pt 351.0pt 387.0pt 418.0pt; margin-left: 0"><span style="font-size:10.0pt">I 
+          prefer working on one thing at a time to working on a<span style="mso-tab-count:1"> </span>variety of things at once.</span> 
+      </p></td>
+      <td width="40" height="19" align="center"> 
+        <input type="radio" value="1" name="R13">
+      </td>
+      <td width="23" height="19" align="center"> 
+        <input type="radio" value="2" name="R13">
+      </td>
+      <td width="25" height="19" align="center"> 
+        <input type="radio" value="3" name="R13">
+      </td>
+      <td width="22" height="19" align="center"> 
+        <input type="radio" value="4" name="R13">
+      </td>
+      <td width="42" height="19" align="center"> 
+        <input type="radio" value="5" name="R13">
+      </td>
+    </tr>
+    <tr> 
+      <td width="21" height="19"><b>14.</b></td>
+      <td width="425" height="19"> 
+        <p class="MsoNormal" style="text-indent: 0; tab-stops: 3.75in 315.0pt 351.0pt 387.0pt 418.0pt; margin-left: 0"><span style="font-size:10.0pt">I 
+          generally set a time schedule and keep to it rather than leave things 
+          unscheduled and go with the flow.</span> 
+      </p></td>
+      <td width="40" height="19" align="center"> 
+        <input type="radio" value="1" name="R14">
+      </td>
+      <td width="23" height="19" align="center"> 
+        <input type="radio" value="2" name="R14">
+      </td>
+      <td width="25" height="19" align="center"> 
+        <input type="radio" value="3" name="R14">
+      </td>
+      <td width="22" height="19" align="center"> 
+        <input type="radio" value="4" name="R14">
+      </td>
+      <td width="42" height="19" align="center"> 
+        <input type="radio" value="5" name="R14">
+      </td>
+    </tr>
+    <tr> 
+      <td width="21" height="19"><b>15.</b></td>
+      <td width="425" height="19"> 
+        <p class="MsoNormal" style="text-indent: 0; tab-stops: 3.75in 315.0pt 351.0pt 387.0pt 418.0pt; margin-left: 0"><span style="font-size:10.0pt">I 
+          find it easier to work with someone who is fast and<span style="mso-tab-count:1"></span>wants 
+          to see immediate results than to work with someone who is slow and wants 
+          to consider all the facts.<span style="mso-tab-count:1"> </span></span> 
+      </p></td>
+      <td width="40" height="19" align="center"> 
+        <input type="radio" value="1" name="R15">
+      </td>
+      <td width="23" height="19" align="center"> 
+        <input type="radio" value="2" name="R15">
+      </td>
+      <td width="25" height="19" align="center"> 
+        <input type="radio" value="3" name="R15">
+      </td>
+      <td width="22" height="19" align="center"> 
+        <input type="radio" value="4" name="R15">
+      </td>
+      <td width="42" height="19" align="center"> 
+        <input type="radio" value="5" name="R15">
+      </td>
+    </tr>
+    <tr> 
+      <td width="21" height="19"><b>16.</b></td>
+      <td width="425" height="19"> 
+        <p class="MsoNormal" style="text-indent: 0; tab-stops: 3.75in 315.0pt 351.0pt 387.0pt 418.0pt; margin-left: 0"><span style="font-size:10.0pt">In 
+          order to learn about something, I tend to consult many sources of information 
+          rather than to go to the one best<span style="mso-tab-count:1"></span>authority.</span> 
+      </p></td>
+      <td width="40" height="19" align="center"> 
+        <input type="radio" value="1" name="R16">
+      </td>
+      <td width="23" height="19" align="center"> 
+        <input type="radio" value="2" name="R16">
+      </td>
+      <td width="25" height="19" align="center"> 
+        <input type="radio" value="3" name="R16">
+      </td>
+      <td width="22" height="19" align="center"> 
+        <input type="radio" value="4" name="R16">
+      </td>
+      <td width="42" height="19" align="center"> 
+        <input type="radio" value="5" name="R16">
+      </td>
+    </tr>
+    <tr> 
+      <td width="21" height="19"><b>17.</b></td>
+      <td width="425" height="19"> 
+        <p class="MsoNormal" style="text-indent: 0; tab-stops: 3.75in 315.0pt 351.0pt 387.0pt 418.0pt; margin-left: 0"><span style="font-size:10.0pt">In 
+          figuring out problems, I prefer focusing on the whole situation to focusing 
+          on specific parts or taking one step at a time.</span> 
+      </p></td>
+      <td width="40" height="19" align="center"> 
+        <input type="radio" value="1" name="R17">
+      </td>
+      <td width="23" height="19" align="center"> 
+        <input type="radio" value="2" name="R17">
+      </td>
+      <td width="25" height="19" align="center"> 
+        <input type="radio" value="3" name="R17">
+      </td>
+      <td width="22" height="19" align="center"> 
+        <input type="radio" value="4" name="R17">
+      </td>
+      <td width="42" height="19" align="center"> 
+        <input type="radio" value="5" name="R17">
+      </td>
+    </tr>
+    <tr> 
+      <td width="21" height="19"><b>18.</b></td>
+      <td width="425" height="19"> 
+        <p class="MsoNormal" style="text-indent: 0; tab-stops: 3.75in 315.0pt 351.0pt 387.0pt 418.0pt; margin-left: 0"><span style="font-size:10.0pt">When 
+          tackling a new task, I would rather figure it out on my own by experimentation 
+          than follow someone else's example or demonstration.</span> 
+      </p></td>
+      <td width="40" height="19" align="center"> 
+        <input type="radio" value="1" name="R18">
+      </td>
+      <td width="23" height="19" align="center"> 
+        <input type="radio" value="2" name="R18">
+      </td>
+      <td width="25" height="19" align="center"> 
+        <input type="radio" value="3" name="R18">
+      </td>
+      <td width="22" height="19" align="center"> 
+        <input type="radio" value="4" name="R18">
+      </td>
+      <td width="42" height="19" align="center"> 
+        <input type="radio" value="5" name="R18">
+      </td>
+    </tr>
+    <tr> 
+      <td width="21" height="19"><b>19.</b></td>
+      <td width="425" height="19"> 
+        <p class="MsoNormal" style="text-indent: 0; tab-stops: 3.75in 315.0pt 351.0pt 387.0pt 418.0pt; margin-left: 0"><span style="font-size:10.0pt">When 
+          making decisions, I consider my likes and dislikes, not just the facts.</span> 
+      </p></td>
+      <td width="40" height="19" align="center"> 
+        <input type="radio" value="1" name="R19">
+      </td>
+      <td width="23" height="19" align="center"> 
+        <input type="radio" value="2" name="R19">
+      </td>
+      <td width="25" height="19" align="center"> 
+        <input type="radio" value="3" name="R19">
+      </td>
+      <td width="22" height="19" align="center"> 
+        <input type="radio" value="4" name="R19">
+      </td>
+      <td width="42" height="19" align="center"> 
+        <input type="radio" value="5" name="R19">
+      </td>
+    </tr>
+    <tr> 
+      <td width="21" height="19"><b>20.</b></td>
+      <td width="425" height="19"> 
+        <p class="MsoNormal" style="text-indent: 0; tab-stops: 3.75in 315.0pt 351.0pt 387.0pt 418.0pt; margin-left: 0"><span style="font-size:10.0pt">I 
+          prefer having tasks and procedures explicitly defined to<span style="mso-tab-count:1"> </span>having a general idea of what has to be done.</span> 
+      </p></td>
+      <td width="40" height="19" align="center"> 
+        <input type="radio" value="1" name="R20">
+      </td>
+      <td width="23" height="19" align="center"> 
+        <input type="radio" value="2" name="R20">
+      </td>
+      <td width="25" height="19" align="center"> 
+        <input type="radio" value="3" name="R20">
+      </td>
+      <td width="22" height="19" align="center"> 
+        <input type="radio" value="4" name="R20">
+      </td>
+      <td width="42" height="19" align="center"> 
+        <input type="radio" value="5" name="R20">
+      </td>
+    </tr>
+  </tbody></table>
+    </center>
+  </div>
+<p class="MsoNormal" align="center"><input onclick="computefscore(this.form)" type="button" value="Compute my scores" name="B3"></p>
+<p class="MsoNormal" align="center"><b>High context score
+is: <input type="text" name="hscore" size="6"></b></p>
+<p class="MsoNormal" align="center"><b>Low context score is: <input type="text" name="lscore" size="6"></b></p>
+<p class="MsoNormal" align="center"><b>The difference
+between your scores is: </b><font face="Comic Sans MS"> <input type="text" name="dscore" size="6"></font></p>
+  <p class="MsoNormal" align="center"> 
+    <input type="reset" value="Reset">
+</form>
     </div>
 
     <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
@@ -78,8 +666,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
   </div>
 </div>
 
-<!-- Contact (with google maps) -->
-<div id="googleMap" class="w3-grayscale-max" style="width:100%;height:400px;"></div>
 
 <div class="w3-container w3-padding-64 w3-blue-grey w3-grayscale-min w3-xlarge">
   <div class="w3-content">
@@ -99,48 +685,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  <p>Powered by <a href="#" title="Knott's First Period" target="_blank" class="w3-hover-text-green">Mr. Knott's 1st period English Class</a></p>
 </footer>
 
-<!-- Add Google Maps -->
-<script>
-function myMap()
-{
-  myCenter=new google.maps.LatLng(41.878114, -87.629798);
-  var mapOptions= {
-    center:myCenter,
-    zoom:12, scrollwheel: false, draggable: false,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
-
-  var marker = new google.maps.Marker({
-    position: myCenter,
-  });
-  marker.setMap(map);
-}
-
-// Tabbed Menu
-function openMenu(evt, menuName) {
-  var i, x, tablinks;
-  x = document.getElementsByClassName("menu");
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < x.length; i++) {
-     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
-  }
-  document.getElementById(menuName).style.display = "block";
-  evt.currentTarget.firstElementChild.className += " w3-red";
-}
-document.getElementById("myLink").click();
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
-<!--
-To use this code on your website, get a free API key from Google.
-Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
--->
 
 </body>
 </html>
